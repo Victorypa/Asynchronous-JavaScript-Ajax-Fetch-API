@@ -94,7 +94,7 @@
 // sayHello('Brad', 'Traversy');
 
 
-const users = ['Nathan', 'John', 'William'];
+// const users = ['Nathan', 'John', 'William'];
 
 // const nameLengths = users.map(function(name) {
 // return name.length;
@@ -102,11 +102,44 @@ const users = ['Nathan', 'John', 'William'];
 
 // Shorter
 
-const nameLengths = users.map((name) => {
-  return name.length;
-  });
+// const nameLengths = users.map((name) => {
+//   return name.length;
+//   });
 
   // Shortest
-  const nameLengths = users.map(name => name.length);
+//   const nameLengths = users.map(name => name.length);
 
-console.log(nameLengths)
+// console.log(nameLengths);
+
+const http = new EasyHTTP;
+
+
+// Get users
+// http.get('https://jsonplaceholder.typicode.com/users')
+// .then(data => console.log(data))
+// .catch(err => console.log(err))
+
+// User Data
+const data = {
+  name: 'John Doe',
+  username: 'johndoe',
+  email: 'jdoe@gmail.com'
+}
+
+// Create User
+// http.post('https://jsonplaceholder.typicode.com/users', data)
+
+// .then(data => console.log(data))
+// .catch(err => console.log(err));
+
+// Update Post
+// http.put('https://jsonplaceholder.typicode.com/users/2', data)
+
+// .then(data => console.log(data))
+// .catch(err => console.log(err));
+
+// Delete User
+http.delete('https://jsonplaceholder.typicode.com/users/2')
+
+.then(data => console.log(data))
+.catch(err => console.log(err));
